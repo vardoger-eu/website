@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{ section.title }}{% endblock %}
+{% block description %}{{ section.description }}{% endblock %}
+{% block og_title %}{{ section.title }}{% endblock %}
+{% block og_description %}{{ section.description }}{% endblock %}
+
+{% block body %}
+{% set t = section.extra %}
+<a class="skip" href="#main">{{ t.skip }}</a>
+
+<header class="hero">
+  <img class="banner" src="{{ get_url(path='images/banner.jpg') }}" alt="{{ t.banner_alt }}" width="3168" height="792">
+  <div class="wrap hero-text">
+    <img class="logo" src="{{ get_url(path='images/icon.svg') }}" alt="" width="96" height="96">
+    <div>
+      <h1 class="wordmark">{{ t.wordmark }}</h1>
+      <p class="tagline">{{ t.tagline }}</p>
+      <p class="line">{{ t.line }}</p>
+      <p class="slogan">{{ t.slogan }}</p>
+    </div>
+  </div>
+  {# TODO: a download / release link once there is a public release. #}
+</header>
+
+<main id="main" class="wrap">
+  <section aria-labelledby="what">
+    <h2 id="what">{{ t.what_heading }}</h2>
+    <p class="lead">{{ t.what }}</p>
+  </section>
+
+  <section aria-labelledby="modes">
+    <h2 id="modes">{{ t.modes_heading }}</h2>
+    <ol class="modes">
+      {% for m in t.modes %}
+      <li class="mode {{ m.status }}">
+        <span class="status">{{ m.label }}</span>
+        <h3>{{ m.name }}</h3>
+        <p>{{ m.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <section aria-labelledby="name">
+    <h2 id="name">{{ t.name_heading }}</h2>
+    {% for p in t.name_paragraphs %}
+    <p>{{ p | markdown(inline=true) | safe }}</p>
+    {% endfor %}
+    <ul class="links">
+      {% for l in t.name_links %}
+      <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="background">
+    <h2 id="background">{{ t.background_heading }}</h2>
+    <p>{{ t.citation | markdown(inline=true) | safe }} <a href="{{ t.doi }}" rel="noopener">{{ t.doi | replace(from="https://", to="") }}</a></p>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">{{ t.contact_heading }}</h2>
+    <ul class="links">
+      <li><a href="mailto:{{ t.email }}">{{ t.email }}</a></li>
+      <li><a href="{{ t.github }}" rel="noopener">GitHub: {{ t.github | replace(from="https://", to="") }}</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>{{ t.copyright }} · {{ t.made_in }}</p>
+  <p class="small">{{ t.rust_note }}</p>
+</footer>
+{% endblock %}

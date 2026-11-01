@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="1024" height="1024" viewBox="0 0 1024 1024"
+     role="img" aria-labelledby="icon-title icon-description">
+  <title id="icon-title">Vardøger app icon</title>
+  <desc id="icon-description">An orange gear frames a real orange industrial arm carrying a suspended payload and a softly glowing cyan digital twin with its payload on the floor. Both arms use the AHS claw: a lifting eye and hub with five curved ribs that close around a ball on a short rod fixed to the payload.</desc>
+  <defs>
+    <linearGradient id="navy-background" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B3556"/>
+      <stop offset="0.55" stop-color="#102541"/>
+      <stop offset="1" stop-color="#08172D"/>
+    </linearGradient>
+    <radialGradient id="navy-atmosphere" cx="0.51" cy="0.43" r="0.65">
+      <stop offset="0" stop-color="#275575" stop-opacity="0.23"/>
+      <stop offset="0.72" stop-color="#12354E" stop-opacity="0.04"/>
+      <stop offset="1" stop-color="#07182C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gear-orange" x1="0.14" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#ED874A"/>
+      <stop offset="0.49" stop-color="#E8743B"/>
+      <stop offset="1" stop-color="#D9632F"/>
+    </linearGradient>
+    <linearGradient id="arm-orange" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#F4F7FA"/>
+      <stop offset="1" stop-color="#C9D3DD"/>
+    </linearGradient>
+    <radialGradient id="steel-ball" cx="0.31" cy="0.26" r="0.77">
+      <stop offset="0" stop-color="#E8F7FF"/>
+      <stop offset="0.22" stop-color="#B6D2E2"/>
+      <stop offset="0.55" stop-color="#7298B1"/>
+      <stop offset="1" stop-color="#344F6C"/>
+    </radialGradient>
+    <linearGradient id="steel-post">
+      <stop offset="0" stop-color="#526F8A"/>
+      <stop offset="0.38" stop-color="#D5EAF3"/>
+      <stop offset="0.68" stop-color="#A7C4D5"/>
+      <stop offset="1" stop-color="#527790"/>
+    </linearGradient>
+    <radialGradient id="twin-ball" cx="0.31" cy="0.26" r="0.77">
+      <stop offset="0" stop-color="#E9FCFF"/>
+      <stop offset="0.25" stop-color="#A7EDFA"/>
+      <stop offset="0.62" stop-color="#4FC2DE"/>
+      <stop offset="1" stop-color="#237C9E"/>
+    </radialGradient>
+    <linearGradient id="twin-post">
+      <stop offset="0" stop-color="#329FBE"/>
+      <stop offset="0.4" stop-color="#C4F8FF"/>
+      <stop offset="1" stop-color="#4CC7E2"/>
+    </linearGradient>
+    <linearGradient id="floor-light" gradientUnits="userSpaceOnUse" x1="560" y1="750" x2="740" y2="750">
+      <stop offset="0" stop-color="#60DCFA" stop-opacity="0"/>
+      <stop offset="0.28" stop-color="#60DCFA" stop-opacity="0.55"/>
+      <stop offset="0.7" stop-color="#60DCFA" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#60DCFA" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-cyan-glow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <g id="socket-housing" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M -6 26 C -17 37 -22 58 -17 85" stroke-width="9" opacity="0.6"/>
+      <path d="M 6 26 C 17 37 22 58 17 85" stroke-width="9" opacity="0.6"/>
+      <path d="M -9 24 C -27 31 -42 51 -39 73 C -38 83 -33 90 -20 92" stroke-width="14"/>
+      <path d="M 9 24 C 27 31 42 51 39 73 C 38 83 33 90 20 92" stroke-width="14"/>
+      <path d="M 0 26 V 90" stroke-width="10"/>
+      <path d="M -11 22 H 11" stroke-width="12"/>
+    </g>
+    <g id="digital-arm-geometry" stroke="#6DE1FA" stroke-width="11" stroke-linejoin="round">
+      <path d="M 346 604 L 500 500 L 650 560" fill="none" stroke-width="48" stroke-linecap="round"/>
+      <path d="M 346 604 L 500 500 L 650 560" fill="none" stroke="#102A45" stroke-width="26" stroke-linecap="round"/>
+      <circle cx="500" cy="500" r="25" fill="#102A45"/>
+      <circle cx="650" cy="560" r="22" fill="#102A45"/>
+    </g>
+    <g id="digital-coupling-geometry" transform="translate(650 580)">
+      <rect x="-5" y="76" width="10" height="48" fill="url(#twin-post)"/>
+      <circle cx="0" cy="62" r="17" fill="url(#twin-ball)"/>
+      <circle cx="-5" cy="56" r="3" fill="#EAFDFF" opacity="0.85"/>
+      <rect x="-9" y="0" width="18" height="22" rx="4" fill="#102A45" stroke="#6DE1FA" stroke-width="6"/>
+      <use xlink:href="#socket-housing" stroke="#6DE1FA"/>
+      <rect id="payload-separation-outline" x="-55" y="124" width="110" height="34" rx="3" fill="#0D2037" stroke="#0D2037" stroke-width="20"/>
+      <rect id="landed-payload" x="-55" y="124" width="110" height="34" rx="3" fill="#12354D" stroke="#6DE1FA" stroke-width="8"/>
+    </g>
+  </defs>
+
+  <g id="background">
+    <rect x="26" y="26" width="972" height="972" rx="210" fill="url(#navy-background)"/>
+    <rect x="26" y="26" width="972" height="972" rx="210" fill="url(#navy-atmosphere)"/>
+  </g>
+
+  <g id="gear-frame">
+    <path d="M 506.694 132.037 L 525.290 64.197 L 561.161 66.705 L 570.135 136.473 A 380 380 0 0 1 605.217 143.611 L 640.738 82.896 L 674.737 94.602 L 665.347 164.315 A 380 380 0 0 1 697.387 180.290 L 747.411 130.837 L 777.222 150.944 L 750.109 215.852 A 380 380 0 0 1 776.923 239.574 L 838.042 204.753 L 861.633 231.891 L 818.645 287.570 A 380 380 0 0 1 838.405 317.424 L 906.454 299.608 L 922.217 331.927 L 866.283 374.583 A 380 380 0 0 1 877.643 408.534 L 947.984 408.938 L 954.845 444.235 L 889.777 470.960 A 380 380 0 0 1 891.963 506.694 L 959.803 525.290 L 957.295 561.161 L 887.527 570.135 A 380 380 0 0 1 880.389 605.217 L 941.104 640.738 L 929.398 674.737 L 859.685 665.347 A 380 380 0 0 1 843.710 697.387 L 893.163 747.411 L 873.056 777.222 L 808.148 750.109 A 380 380 0 0 1 784.426 776.923 L 819.247 838.042 L 792.109 861.633 L 736.430 818.645 A 380 380 0 0 1 706.576 838.405 L 724.392 906.454 L 692.073 922.217 L 649.417 866.283 A 380 380 0 0 1 615.466 877.643 L 615.062 947.984 L 579.765 954.845 L 553.040 889.777 A 380 380 0 0 1 517.306 891.963 L 498.710 959.803 L 462.839 957.295 L 453.865 887.527 A 380 380 0 0 1 418.783 880.389 L 383.262 941.104 L 349.263 929.398 L 358.653 859.685 A 380 380 0 0 1 326.613 843.710 L 276.589 893.163 L 246.778 873.056 L 273.891 808.148 A 380 380 0 0 1 247.077 784.426 L 185.958 819.247 L 162.367 792.109 L 205.355 736.430 A 380 380 0 0 1 185.595 706.576 L 117.546 724.392 L 101.783 692.073 L 157.717 649.417 A 380 380 0 0 1 146.357 615.466 L 76.016 615.062 L 69.155 579.765 L 134.223 553.040 A 380 380 0 0 1 132.037 517.306 L 64.197 498.710 L 66.705 462.839 L 136.473 453.865 A 380 380 0 0 1 143.611 418.783 L 82.896 383.262 L 94.602 349.263 L 164.315 358.653 A 380 380 0 0 1 180.290 326.613 L 130.837 276.589 L 150.944 246.778 L 215.852 273.891 A 380 380 0 0 1 239.574 247.077 L 204.753 185.958 L 231.891 162.367 L 287.570 205.355 A 380 380 0 0 1 317.424 185.595 L 299.608 117.546 L 331.927 101.783 L 374.583 157.717 A 380 380 0 0 1 408.534 146.357 L 408.938 76.016 L 444.235 69.155 L 470.960 134.223 A 380 380 0 0 1 506.694 132.037 Z M 862 512 A 350 350 0 1 0 162 512 A 350 350 0 1 0 862 512 Z" fill="url(#gear-orange)" fill-rule="evenodd"/>
+  </g>
+
+  <g id="digital-twin">
+    <use xlink:href="#digital-arm-geometry" opacity="0.46" filter="url(#soft-cyan-glow)"/>
+    <use xlink:href="#digital-arm-geometry"/>
+    <path id="floor-glow" d="M 562 750 H 738" fill="none" stroke="url(#floor-light)" stroke-width="12" opacity="0.38" filter="url(#soft-cyan-glow)"/>
+    <use xlink:href="#digital-coupling-geometry" opacity="0.4" filter="url(#soft-cyan-glow)"/>
+    <use xlink:href="#digital-coupling-geometry"/>
+    <path id="floor-contact" d="M 562 750 H 738" fill="none" stroke="#477D96" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <g id="physical-arm">
+    <path d="M 286 694 L 310 624 H 384 L 414 694 Z" fill="#B9C4CF"/>
+    <path d="M 346 604 L 390 376" fill="none" stroke="url(#arm-orange)" stroke-width="76" stroke-linecap="round"/>
+    <path d="M 390 376 L 610 269" fill="none" stroke="url(#arm-orange)" stroke-width="64" stroke-linecap="round"/>
+    <rect x="604" y="274" width="20" height="49" rx="5" fill="#B9C4CF"/>
+    <circle cx="610" cy="269" r="33" fill="#E57236"/>
+    <circle cx="390" cy="376" r="43" fill="#DE692E"/>
+    <circle cx="390" cy="376" r="17" fill="#14283E"/>
+    <circle cx="346" cy="604" r="44" fill="#DD692F"/>
+    <circle cx="346" cy="604" r="19" fill="#14283E"/>
+    <rect x="270" y="694" width="182" height="39" rx="10" fill="#9AA7B4"/>
+  </g>
+
+  <g id="physical-coupling" transform="translate(614 318)">
+    <rect id="physical-payload-post" x="-5" y="76" width="10" height="48" fill="url(#steel-post)"/>
+    <circle id="captured-steel-ball" cx="0" cy="62" r="17" fill="url(#steel-ball)"/>
+    <circle cx="-5" cy="56" r="3" fill="#F0FAFF" opacity="0.9"/>
+    <rect x="-9" y="0" width="18" height="22" rx="4" fill="#9AA7B4"/>
+    <use xlink:href="#socket-housing" stroke="#E8743B"/>
+    <rect id="suspended-payload" x="-55" y="124" width="110" height="34" rx="5" fill="#E8743B"/>
+  </g>
+</svg>
+

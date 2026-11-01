@@ -1,0 +1,16 @@
+# The Vardøger website, built with Zola (https://www.getzola.org).
+base_url = "https://vardoger.eu"
+title = "Vardøger"
+description = "The digital twin platform for intelligent mechatronics."
+default_language = "en"
+
+compile_sass = false
+build_search_index = false
+generate_feeds = false
+
+# A Norwegian version at /no/ later: add
+#   [languages.no]
+#   title = "Vardøger"
+#   description = "Den digitale tvillingplattformen for intelligent mekatronikk."
+# and content/_index.no.md with the same [extra] keys in Norwegian; the
+# template reads every text from there.
