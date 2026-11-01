@@ -41,6 +41,7 @@
     <p class="actions">
       <a class="button big" href="{{ mailto | safe }}">{{ t.email }}</a>
       <a href="{{ t.github }}" rel="noopener">{{ t.github | replace(from="https://", to="") }}</a>
+      <a href="{{ t.linkedin }}" rel="noopener">{{ t.linkedin_label }}</a>
     </p>
     {# TODO: a contact form could go here later; it needs a privacy-friendly
        EU form service and a privacy notice on this site. #}

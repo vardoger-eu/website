@@ -29,6 +29,8 @@ contact_text = "Vardøger is looking for pilot users, industrial partners and re
 email = "hello@vardoger.eu"
 email_subject = "Vard%C3%B8ger"
 github = "https://github.com/vardoger-eu"
+linkedin = "https://www.linkedin.com/in/hagenmek/"
+linkedin_label = "Daniel Hagen on LinkedIn"
 
 # 9. Footer
 copyright = "© 2026 Daniel Hagen"
