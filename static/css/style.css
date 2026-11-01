@@ -88,12 +88,12 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
   grid-template-columns: auto minmax(0, 38rem);
   grid-template-areas: ". badge" "logo titles" "logo actions";
   justify-content: start;
-  column-gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  column-gap: clamp(1.25rem, 2vw, 1.75rem);
   align-items: start;
   margin: 0;
   max-width: none;
   /* A little below the middle: the aurora keeps the top. */
-  padding: 5rem 1.5rem 2rem max(1.5rem, 5vw);
+  padding: 5rem 1.5rem 2rem max(1.5rem, 3vw);
 }
 .hero-text .badge { grid-area: badge; justify-self: start; }
 .hero-text .titles { grid-area: titles; }
@@ -101,7 +101,7 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
 /* From the top of the wordmark to the slogan. */
 .logo {
   grid-area: logo;
-  width: clamp(9rem, 17vw, 17.5rem);
+  width: clamp(9rem, 15vw, 15.5rem);
   height: auto;
   margin-top: 0.35rem;
 }
@@ -184,9 +184,10 @@ footer p { margin: 0.2rem 0; }
 
 html { scroll-behavior: smooth; }
 
-/* Below 1536 px (half screens, laptops, tablets, phones) the text would
-   cover the vessel: the whole scene becomes a banner above it instead. */
-@media (max-width: 96rem) {
+/* Below 1600 px (half screens, laptops, tablets, phones) the text would
+   cover the platform or the vessel: the whole scene becomes a banner
+   above it instead. */
+@media (max-width: 100rem) {
   .hero {
     display: block;
     min-height: 0;
