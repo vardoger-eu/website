@@ -1,6 +1,6 @@
 # vardoger.eu
 
-The website of [Vardøger](https://github.com/hagenmek/vardoger), the digital
+The website of [Vardøger](https://github.com/vardoger-eu/vardoger), the digital
 twin platform for intelligent mechatronics. One static page, built with
 [Zola](https://www.getzola.org); no JavaScript, no tracking, no cookies, no
 external fonts or CDNs.
