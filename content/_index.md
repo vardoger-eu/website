@@ -19,7 +19,7 @@ coming_heading = "What’s coming"
 coming = [
   "Vardøger is the digital twin platform for intelligent mechatronics: a native desktop application, written in Rust, for building, simulating and operating intelligent digital twins of machines. It combines real-time multibody mechanics, hydraulics and electric drives, a 3D view with the machines’ CAD, and open links to the outside world, from game controllers and robotics middleware to industrial fieldbuses.",
   "Like the *vardøger* of Norwegian folklore — the benevolent phantom double that goes ahead of you — the twin goes ahead of its machine. Every operation is planned and simulated in the twin first; the operator sees what is coming and can approve, adjust or take over, so the human stays in the loop as more of the work becomes autonomous. While the machine works, the twin keeps watch, warning early of wear and faults. In time, the twin will be designed together with the machine, before anything is built.",
-  "Vardøger is in development: a working prototype exists, and the full platform is coming.",
+  "Vardøger is in development, and a first version is on its way. Stay tuned.",
 ]
 
 # 8. Contact
