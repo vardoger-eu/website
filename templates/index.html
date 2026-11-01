@@ -40,6 +40,7 @@
   <section aria-labelledby="coming">
     <h2 id="coming">{{ t.coming_heading }}</h2>
     {% for p in t.coming %}<p{% if loop.first %} class="lead"{% endif %}>{{ p | markdown(inline=true) | safe }}</p>{% endfor %}
+    <p class="paper">{{ t.paper_intro }} <a href="{{ t.paper_url }}" target="_blank" rel="noopener"><cite>{{ t.paper_title }}</cite></a>, {{ t.paper_venue }}</p>
   </section>
 
   <section aria-labelledby="name">

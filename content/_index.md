@@ -21,6 +21,11 @@ coming = [
   "Vardøger is the digital twin platform for intelligent mechatronics. It is a native desktop application, written in Rust, for building, simulating and operating intelligent digital twins of machines. It combines real-time multibody mechanics, hydraulics and electric drives, a 3D view with the machines’ CAD, and open links to the outside world, from game controllers and robotics middleware to industrial fieldbuses. An intelligent twin does more than mirror its machine. It predicts, advises and acts one step ahead, and shows the operator what is coming.",
   "Vardøger is in development, and a first version is on its way. Stay tuned.",
 ]
+# The paper behind it (open access).
+paper_intro = "The idea behind Vardøger is described in"
+paper_title = "Intelligent Mechatronics: intelligence in the design process, not only the machine"
+paper_venue = "Frontiers in Mechanical Engineering, 2026. Open access."
+paper_url = "https://doi.org/10.3389/fmech.2026.1968837"
 
 # The name: the user's story, with plainer punctuation.
 name_heading = "What is a vardøger?"
