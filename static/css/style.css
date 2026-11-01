@@ -217,6 +217,10 @@ main section, #top { scroll-margin-top: 4.5rem; }
 
 /* footer.wrap: the general .wrap rule (margin 0 auto, padding 0) would
    otherwise win over the footer's spacing. */
+/* The paper line under "What's coming": quieter than the text above. */
+.paper { color: var(--muted); }
+.paper cite { font-style: italic; }
+
 footer.wrap {
   margin-top: 3.5rem;
   padding-top: 1.5rem;
