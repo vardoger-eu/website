@@ -12,7 +12,8 @@ tagline = "The digital twin platform for intelligent mechatronics"
 line = "Build your machine’s benevolent phantom double for safer, smarter operations."
 slogan = "The twin moves first. The machine follows."
 cta = "Get in touch"
-more = "See what’s coming ↓"
+more = "What’s coming ↓"
+more_name = "What is a vardøger? ↓"
 
 # 2. What it is: the whole concept, and that it is coming
 coming_heading = "What’s coming"
@@ -22,7 +23,7 @@ coming = [
 ]
 
 # The name: the user's story, with plainer punctuation.
-name_heading = "The name"
+name_heading = "What is a vardøger?"
 name_paragraphs = [
   "In Norwegian folklore, the vardøger is a heralding spirit, a benevolent phantom double that goes ahead of you. People at home hear your footsteps on the stairs, the door creak or your cough, and more rarely they see you. Shortly afterwards you arrive. It is déjà vu in reverse. The experience comes first, and the person follows.",
   "The vardøger is also seen as a kind of guardian angel, sometimes identified with the protective spirit called *fylgje* (literally “follower”). Tales of it are told all over Norway, and some still believe in it today. The word comes from Old Norse *varðhygi*, possibly from *vǫrðr*, “guardian, watchman”, and *hugr*, “mind”. A watchful mind that walks ahead.",
