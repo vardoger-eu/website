@@ -37,7 +37,7 @@ name_links = [
 
 # 8. Contact
 contact_heading = "Interested?"
-contact_text = "Vardøger is looking for pilot users, industrial partners and research collaborators. If you build or operate machines and want a twin that goes ahead of them, get in touch."
+contact_text = "Vardøger is looking for pilot users and industrial partners. If you build or operate machines and want a twin that goes ahead of them, get in touch."
 email = "hello@vardoger.eu"
 email_subject = "Vard%C3%B8ger"
 github = "https://github.com/vardoger-eu"
