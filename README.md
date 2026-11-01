@@ -2,8 +2,9 @@
 
 The website of [Vardøger](https://github.com/vardoger-eu/vardoger), the digital
 twin platform for intelligent mechatronics. One static page, built with
-[Zola](https://www.getzola.org); no JavaScript, no tracking, no cookies, no
-external fonts or CDNs.
+[Zola](https://www.getzola.org); no tracking, no cookies, no external fonts
+or CDNs. Two small inline scripts only show the bar at the top once the
+page has scrolled; without JavaScript the bar simply stays.
 
 ## Build locally
 
