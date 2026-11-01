@@ -7,6 +7,7 @@
 
 {% block body %}
 {% set t = section.extra %}
+{% set mailto = "mailto:" ~ t.email ~ "?subject=" ~ t.email_subject %}
 <a class="skip" href="#main">{{ t.skip }}</a>
 
 <header class="hero">
@@ -14,27 +15,61 @@
   <div class="wrap hero-text">
     <img class="logo" src="{{ get_url(path='images/icon.svg') }}" alt="" width="96" height="96">
     <div>
+      <p class="badge">{{ t.badge }}</p>
       <h1 class="wordmark">{{ t.wordmark }}</h1>
       <p class="tagline">{{ t.tagline }}</p>
       <p class="line">{{ t.line }}</p>
       <p class="slogan">{{ t.slogan }}</p>
+      <p class="actions">
+        <a class="button" href="{{ mailto | safe }}">{{ t.cta }}</a>
+        <a class="more" href="#coming">{{ t.more }}</a>
+      </p>
+      {# TODO: a download / release link once there is a public release. #}
     </div>
   </div>
-  {# TODO: a download / release link once there is a public release. #}
 </header>
 
 <main id="main" class="wrap">
-  <section aria-labelledby="what">
-    <h2 id="what">{{ t.what_heading }}</h2>
-    <p class="lead">{{ t.what }}</p>
+  <section aria-labelledby="coming">
+    <h2 id="coming">{{ t.coming_heading }}</h2>
+    {% for p in t.coming %}<p{% if loop.first %} class="lead"{% endif %}>{{ p }}</p>{% endfor %}
   </section>
 
-  <section aria-labelledby="modes">
-    <h2 id="modes">{{ t.modes_heading }}</h2>
+  <section aria-labelledby="name">
+    <h2 id="name">{{ t.name_heading }}</h2>
+    {% for p in t.name_paragraphs %}<p>{{ p | markdown(inline=true) | safe }}</p>{% endfor %}
+    <ul class="links">
+      {% for l in t.name_links %}<li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>{% endfor %}
+    </ul>
+  </section>
+
+  <section aria-labelledby="compare">
+    <h2 id="compare">{{ t.compare_heading }}</h2>
+    <div class="compare-head" aria-hidden="true">
+      <span>{{ t.compare_left }}</span><span></span><span>{{ t.compare_right }}</span>
+    </div>
+    <ol class="compare">
+      {% for c in t.compare %}
+      <li>
+        <p class="legend"><span class="visually-hidden">{{ t.compare_left }}: </span>{{ c.legend }}</p>
+        <span class="arrow" aria-hidden="true">→</span>
+        <div class="trait">
+          <p><strong>{{ c.title }}</strong> {{ c.text }}</p>
+          <span class="tag {{ c.status }}">{{ c.label }}</span>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+    <p class="closing">{{ t.compare_closing }}</p>
+  </section>
+
+  <section aria-labelledby="roadmap">
+    <h2 id="roadmap">{{ t.roadmap_heading }}</h2>
+    <p>{{ t.roadmap_intro }}</p>
     <ol class="modes">
       {% for m in t.modes %}
-      <li class="mode {{ m.status }}">
-        <span class="status">{{ m.label }}</span>
+      <li class="mode">
+        <span class="tag {{ m.status }}">{{ m.label }}</span>
         <h3>{{ m.name }}</h3>
         <p>{{ m.text }}</p>
       </li>
@@ -42,16 +77,12 @@
     </ol>
   </section>
 
-  <section aria-labelledby="name">
-    <h2 id="name">{{ t.name_heading }}</h2>
-    {% for p in t.name_paragraphs %}
-    <p>{{ p | markdown(inline=true) | safe }}</p>
-    {% endfor %}
-    <ul class="links">
-      {% for l in t.name_links %}
-      <li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>
-      {% endfor %}
-    </ul>
+  <section aria-labelledby="icon" class="icon-section">
+    <img src="{{ get_url(path='images/icon.svg') }}" alt="{{ t.icon_alt }}" width="220" height="220">
+    <div>
+      <h2 id="icon">{{ t.icon_heading }}</h2>
+      <p>{{ t.icon_text }}</p>
+    </div>
   </section>
 
   <section aria-labelledby="background">
@@ -59,17 +90,19 @@
     <p>{{ t.citation | markdown(inline=true) | safe }} <a href="{{ t.doi }}" rel="noopener">{{ t.doi | replace(from="https://", to="") }}</a></p>
   </section>
 
-  <section aria-labelledby="contact">
+  <section aria-labelledby="contact" class="contact">
     <h2 id="contact">{{ t.contact_heading }}</h2>
-    <ul class="links">
-      <li><a href="mailto:{{ t.email }}">{{ t.email }}</a></li>
-      <li><a href="{{ t.github }}" rel="noopener">GitHub: {{ t.github | replace(from="https://", to="") }}</a></li>
-    </ul>
+    <p>{{ t.contact_text }}</p>
+    <p class="actions">
+      <a class="button big" href="{{ mailto | safe }}">{{ t.email }}</a>
+      <a href="{{ t.github }}" rel="noopener">{{ t.github | replace(from="https://", to="") }}</a>
+    </p>
+    {# TODO: a contact form could go here later; it needs a privacy-friendly
+       EU form service and a privacy notice on this site. #}
   </section>
 </main>
 
 <footer class="wrap">
-  <p>{{ t.copyright }} · {{ t.made_in }}</p>
-  <p class="small">{{ t.rust_note }}</p>
+  <p>{{ t.copyright }} · {{ t.made_in }} · {{ t.rust_note }}</p>
 </footer>
 {% endblock %}

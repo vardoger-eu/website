@@ -115,6 +115,76 @@ h2::after {
 .lead { font-size: 1.125rem; max-width: 46rem; }
 main p { max-width: 46rem; }
 
+/* Badge, buttons */
+.badge {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--orange);
+  border-radius: 999px;
+  color: var(--orange);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  margin: 1.4rem 0 0;
+}
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  background: var(--orange);
+  color: #10131a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.button:hover { background: #f08a55; color: #10131a; }
+.button.big { font-size: 1.15rem; padding: 0.85rem 1.8rem; }
+.more { color: var(--cyan); text-decoration: none; }
+.more:hover { text-decoration: underline; }
+
+/* A vardøger for your machine */
+.compare-head, .compare li {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) 2rem minmax(0, 2.4fr);
+  gap: 0 1rem;
+  align-items: start;
+}
+.compare-head {
+  margin-bottom: 0.4rem;
+  font: 500 0.95rem/1.4 "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.compare-head span:first-child { color: var(--muted); }
+.compare-head span:last-child { color: var(--cyan); }
+.compare { list-style: none; padding: 0; margin: 0; }
+.compare li { padding: 1rem 0; border-top: 1px solid var(--edge); }
+.compare .legend { margin: 0; color: var(--muted); font-style: italic; }
+.compare .arrow { color: var(--cyan); text-align: center; }
+.compare .trait p { margin: 0 0 0.5rem; }
+.compare .trait strong { color: var(--cyan); }
+.closing {
+  margin: 1.8rem 0 0;
+  font: 500 clamp(1.4rem, 3.5vw, 2rem)/1.3 "Space Grotesk", sans-serif;
+  color: var(--text);
+}
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* The icon */
+.icon-section { display: flex; gap: 2rem; align-items: center; }
+.icon-section img { flex: none; width: 13rem; height: 13rem; }
+
+.contact p { max-width: 40rem; }
+
 /* Modes: cards */
 .modes {
   list-style: none;
@@ -132,7 +202,7 @@ main p { max-width: 46rem; }
 }
 .mode h3 { margin: 0.6rem 0 0.4rem; font: 500 1.2rem/1.3 "Space Grotesk", sans-serif; }
 .mode p { margin: 0; color: var(--muted); }
-.status {
+.tag {
   display: inline-block;
   font-size: 0.8rem;
   font-weight: 600;
@@ -141,9 +211,9 @@ main p { max-width: 46rem; }
   border-radius: 999px;
   border: 1px solid currentColor;
 }
-.available .status { color: var(--cyan); }
-.next .status { color: var(--orange); }
-.planned .status { color: var(--muted); }
+.tag.prototype { color: var(--cyan); }
+.tag.next { color: var(--orange); }
+.tag.planned { color: var(--muted); }
 
 .links {
   list-style: none;
@@ -164,12 +234,20 @@ footer {
 footer p { margin: 0.2rem 0; }
 .small { font-size: 0.9rem; }
 
+html { scroll-behavior: smooth; }
+
 @media (max-width: 40rem) {
   .hero-text { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .compare-head { display: none; }
+  .compare li { grid-template-columns: 1fr; gap: 0.3rem; }
+  .compare .arrow { display: none; }
+  .compare .legend::before { content: "The vardøger: "; font-style: normal; }
+  .icon-section { flex-direction: column; align-items: flex-start; }
+  .icon-section img { width: 9rem; height: 9rem; }
   .logo { width: 4.5rem; height: 4.5rem; }
   .banner { max-height: 12rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * { scroll-behavior: auto; }
+  html { scroll-behavior: auto; }
 }
