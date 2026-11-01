@@ -39,7 +39,8 @@
     <p>{{ t.contact_text }}</p>
     <p class="actions">
       <a class="button big" href="{{ mailto | safe }}">{{ t.email }}</a>
-      <a href="{{ t.github }}" target="_blank" rel="noopener">{{ t.github | replace(from="https://", to="") }}</a>
+      {# TODO: link GitHub (t.github) again once something public is there,
+         e.g. a first version or demo. #}
       <a href="{{ t.linkedin }}" target="_blank" rel="noopener">{{ t.linkedin_label }}</a>
     </p>
     {# TODO: a contact form could go here later; it needs a privacy-friendly
