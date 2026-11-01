@@ -10,7 +10,14 @@
 {% set mailto = "mailto:" ~ t.email ~ "?subject=" ~ t.email_subject %}
 <a class="skip" href="#main">{{ t.skip }}</a>
 
-<header class="hero">
+{# A slim bar once the hero has scrolled away: back to the top, and the
+   contact. Shown always without JavaScript. #}
+<nav class="topbar" aria-label="{{ t.wordmark }}">
+  <a class="home" href="#top"><img src="{{ get_url(path='images/icon.svg') }}" alt="" width="28" height="28"><span>{{ t.wordmark }}</span></a>
+  <a class="button small" href="{{ mailto | safe }}">{{ t.cta }}</a>
+</nav>
+
+<header class="hero" id="top">
   <div class="wrap hero-text">
     <p class="badge">{{ t.badge }}</p>
     <img class="logo" src="{{ get_url(path='images/icon.svg') }}" alt="" width="208" height="208">
@@ -60,4 +67,19 @@
 <footer class="wrap">
   <p>{{ t.copyright }} · {{ t.made_in }}</p>
 </footer>
+<script>
+  // Show the bar once the hero's text has scrolled away (no tracking, no libraries).
+  (function () {
+    var bar = document.querySelector(".topbar");
+    var hero = document.querySelector(".hero-text");
+    if (!bar || !hero) return;
+    document.documentElement.classList.add("js");
+    function update() {
+      bar.classList.toggle("shown", hero.getBoundingClientRect().bottom < 0);
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  })();
+</script>
 {% endblock %}

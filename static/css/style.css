@@ -141,6 +141,36 @@ h2::after {
 .lead { font-size: 1.125rem; max-width: 46rem; }
 main p { max-width: 46rem; }
 
+/* The bar at the top once the hero has scrolled away. */
+.topbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem max(1.25rem, 3vw);
+  background: rgba(11, 26, 46, 0.86);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--edge);
+  transition: transform 0.25s ease;
+}
+.js .topbar:not(.shown) { transform: translateY(-110%); }
+.topbar .home {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text);
+  text-decoration: none;
+  font: 700 1.35rem/1 "Space Grotesk", sans-serif;
+}
+.topbar .home img { width: 1.9rem; height: 1.9rem; }
+.button.small { padding: 0.4rem 0.95rem; font-size: 0.95rem; border-radius: 8px; }
+/* Jump targets clear of the bar. */
+main section, #top { scroll-margin-top: 4rem; }
+
 /* Badge, buttons */
 .badge {
   display: inline-block;
@@ -222,7 +252,7 @@ html { scroll-behavior: smooth; }
     padding-top: 15rem;
     background:
       linear-gradient(180deg, rgba(11, 26, 46, 0) 11rem, var(--bg) 15rem),
-      url("../images/scene.jpg") 88% top / auto 15rem no-repeat;
+      url("../images/scene.jpg") right top / auto 15rem no-repeat;
     background-color: var(--bg);
   }
   .hero .hero-text {
@@ -241,4 +271,5 @@ html { scroll-behavior: smooth; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  .topbar { transition: none; }
 }
