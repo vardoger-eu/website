@@ -32,6 +32,6 @@ github = "https://github.com/vardoger-eu"
 
 # 9. Footer
 copyright = "© 2026 Daniel Hagen"
-made_in = "Made in Grimstad, Norway"
+made_in = "Made in Arendal, Norway"
 rust_note = "Written in Rust; not affiliated with the Rust project or Rust Foundation."
 +++
