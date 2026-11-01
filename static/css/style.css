@@ -32,11 +32,11 @@
 
 * { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; background-color: var(--bg); }
 
 body {
   margin: 0;
-  background: linear-gradient(180deg, var(--bg-2) 0, var(--bg) 40rem);
+  background: linear-gradient(180deg, var(--bg-2) 0, var(--bg) 40rem) no-repeat;
   background-color: var(--bg);
   color: var(--text);
   font: 400 1.0625rem/1.65 "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -171,6 +171,7 @@ main p { max-width: 46rem; }
 }
 .button:hover { background: #f08a55; color: #10131a; }
 .button.big { font-size: 1.15rem; padding: 0.85rem 1.8rem; }
+.button .mail { vertical-align: -0.28em; margin-right: 0.55rem; }
 .more { color: var(--cyan); text-decoration: none; }
 .more:hover { text-decoration: underline; }
 
@@ -183,7 +184,9 @@ main p { max-width: 46rem; }
   gap: 0.5rem 1.5rem;
 }
 
-footer {
+/* footer.wrap: the general .wrap rule (margin 0 auto, padding 0) would
+   otherwise win over the footer's spacing. */
+footer.wrap {
   margin-top: 3.5rem;
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
