@@ -73,7 +73,6 @@
     var bar = document.querySelector(".topbar");
     var hero = document.querySelector(".hero-text");
     if (!bar || !hero) return;
-    document.documentElement.classList.add("js");
     function update() {
       bar.classList.toggle("shown", hero.getBoundingClientRect().bottom < 0);
     }
