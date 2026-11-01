@@ -101,7 +101,8 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
 /* From the top of the wordmark to the slogan. */
 .logo {
   grid-area: logo;
-  width: clamp(8rem, 13vw, 13.5rem);
+  /* About as tall as the wordmark, tagline and line beside it. */
+  width: clamp(7rem, 9vw, 10rem);
   height: auto;
   margin-top: 0.35rem;
 }
@@ -206,7 +207,7 @@ html { scroll-behavior: smooth; }
       url("../images/scene.jpg") center top / 100% auto no-repeat;
     background-color: var(--bg);
   }
-  .hero .hero-text { padding-top: 1.75rem; }
+  .hero .hero-text { padding-top: 1.75rem; padding-bottom: 0.5rem; }
 }
 
 
