@@ -182,18 +182,19 @@ footer p { margin: 0.2rem 0; }
 
 html { scroll-behavior: smooth; }
 
-/* Medium widths (laptops, tablets, narrow windows): the wide scene would
-   sit under the text, so the tall one (the phones') takes over, the crane
-   in its upper part and the text over the dark fade at the bottom. */
-@media (max-width: 75rem) {
+/* Below 1280 px (half screens, tablets, phones) the text would cover
+   the vessel: the whole scene becomes a banner above it instead. */
+@media (max-width: 80rem) {
   .hero {
-    align-items: flex-end;
-    min-height: min(100svh, 64rem);
+    display: block;
+    min-height: 0;
+    padding-top: 33.4vw;
     background:
-      linear-gradient(180deg, rgba(11, 26, 46, 0) 28%, rgba(11, 26, 46, 0.86) 58%, var(--bg) 100%),
-      url("../images/scene-portrait.jpg") center 38% / cover no-repeat;
+      linear-gradient(180deg, rgba(11, 26, 46, 0) calc(33.4vw - 3rem), var(--bg) 33.4vw),
+      url("../images/scene.jpg") center top / 100% auto no-repeat;
     background-color: var(--bg);
   }
+  .hero .hero-text { padding-top: 1.75rem; }
 }
 
 
@@ -204,15 +205,6 @@ html { scroll-behavior: smooth; }
     row-gap: 0.75rem;
   }
   .logo { width: 5rem; margin-top: 0; }
-  .hero {
-    align-items: flex-end;
-    min-height: 100svh;
-    padding-top: 0;
-    background:
-      linear-gradient(180deg, rgba(11, 26, 46, 0) 25%, rgba(11, 26, 46, 0.88) 55%, var(--bg) 100%),
-      url("../images/scene-portrait.jpg") 50% 0 / cover no-repeat;
-    background-color: var(--bg);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
