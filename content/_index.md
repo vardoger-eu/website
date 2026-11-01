@@ -46,5 +46,5 @@ linkedin_label = "Daniel Hagen on LinkedIn"
 
 # 9. Footer
 copyright = "© 2026 Daniel Hagen"
-made_in = "Made in Arendal, Norway"
+made_in = "Made in Norway"
 +++
