@@ -211,13 +211,29 @@ html { scroll-behavior: smooth; }
 }
 
 
+/* Phones: a taller crop of the scene (the vessel, crane and twin, not a
+   thin strip), then the badge, the logo beside the wordmark and its lines,
+   the button, and the two links under it. */
 @media (max-width: 40rem) {
-  .hero .hero-text {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "logo" "badge" "titles" "actions";
-    row-gap: 0.75rem;
+  .hero {
+    padding-top: 15rem;
+    background:
+      linear-gradient(180deg, rgba(11, 26, 46, 0) 11rem, var(--bg) 15rem),
+      url("../images/scene.jpg") 88% top / auto 15rem no-repeat;
+    background-color: var(--bg);
   }
-  .logo { width: 5rem; margin-top: 0; }
+  .hero .hero-text {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas: "badge badge" "logo titles" "actions actions";
+    column-gap: 0.9rem;
+    row-gap: 0.6rem;
+    padding: 0.5rem 1.25rem 0.5rem;
+  }
+  .logo { width: 4.25rem; margin-top: 0.3rem; }
+  .wordmark { font-size: 2.6rem; }
+  .tagline { font-size: 1.05rem; }
+  .actions { gap: 0.6rem 1.25rem; }
+  .actions .button { flex: 0 0 100%; text-align: center; }
 }
 
 @media (prefers-reduced-motion: reduce) {
