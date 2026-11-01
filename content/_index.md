@@ -1,5 +1,5 @@
 +++
-title = "Vardøger — the digital twin platform for intelligent mechatronics"
+title = "Vardøger, the digital twin platform for intelligent mechatronics"
 description = "Build your machine's benevolent phantom double for safer, smarter operations. The twin moves first. The machine follows."
 
 [extra]
@@ -17,8 +17,8 @@ more = "See what’s coming ↓"
 # 2. What it is: the whole concept, and that it is coming
 coming_heading = "What’s coming"
 coming = [
-  "Vardøger is the digital twin platform for intelligent mechatronics: a native desktop application, written in Rust, for building, simulating and operating intelligent digital twins of machines. It combines real-time multibody mechanics, hydraulics and electric drives, a 3D view with the machines’ CAD, and open links to the outside world, from game controllers and robotics middleware to industrial fieldbuses.",
-  "Like the *vardøger* of Norwegian folklore — the benevolent phantom double that goes ahead of you — the twin goes ahead of its machine. Every operation is planned and simulated in the twin first; the operator sees what is coming and can approve, adjust or take over, so the human stays in the loop as more of the work becomes autonomous. While the machine works, the twin keeps watch, warning early of wear and faults. In time, the twin will be designed together with the machine, before anything is built.",
+  "Vardøger is a desktop application for building, simulating and operating intelligent digital twins of machines. It brings together multibody mechanics, hydraulics and electric drives, a 3D view of each machine’s CAD, and links to the outside world, from game controllers and ROS 2 to industrial fieldbuses. It is written in Rust and runs in real time.",
+  "The name comes from Norwegian folklore. A *vardøger* is a benevolent double that walks ahead of you, so people hear your footsteps before you arrive. In the same way, the twin goes ahead of its machine. Every operation is planned and simulated in the twin first. The operator sees what is coming and can approve it, adjust it or take over, and stays in the loop as more of the work becomes autonomous. While the machine works, the twin keeps watch and warns early of wear and faults. In time, the twin will be designed together with the machine, before anything is built.",
   "Vardøger is in development, and a first version is on its way. Stay tuned.",
 ]
 
@@ -34,5 +34,4 @@ linkedin_label = "Daniel Hagen on LinkedIn"
 # 9. Footer
 copyright = "© 2026 Daniel Hagen"
 made_in = "Made in Arendal, Norway"
-rust_note = "Written in Rust; not affiliated with the Rust project or Rust Foundation."
 +++
