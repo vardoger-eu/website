@@ -86,7 +86,7 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
 .hero .hero-text {
   display: grid;
   grid-template-columns: auto minmax(0, 38rem);
-  grid-template-areas: ". badge" "logo titles" "logo actions";
+  grid-template-areas: ". badge" "logo titles" ". actions";
   justify-content: start;
   column-gap: clamp(1.25rem, 2vw, 1.75rem);
   align-items: start;
@@ -101,7 +101,7 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
 /* From the top of the wordmark to the slogan. */
 .logo {
   grid-area: logo;
-  width: clamp(9rem, 15vw, 15.5rem);
+  width: clamp(8rem, 13vw, 13.5rem);
   height: auto;
   margin-top: 0.35rem;
 }
