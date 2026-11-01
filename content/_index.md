@@ -31,8 +31,8 @@ name_paragraphs = [
 ]
 name_links = [
   { label = "Watch the story", url = "https://www.youtube.com/watch?v=mVKilbitxMw" },
-  { label = "Store norske leksikon", url = "https://snl.no/vard%C3%B8ger" },
   { label = "Wikipedia", url = "https://en.wikipedia.org/wiki/Vard%C3%B8ger" },
+  { label = "Store norske leksikon", url = "https://snl.no/vard%C3%B8ger" },
 ]
 
 # 8. Contact
