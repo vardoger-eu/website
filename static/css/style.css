@@ -167,7 +167,7 @@ main p { max-width: 46rem; }
 .compare li { padding: 1rem 0; border-top: 1px solid var(--edge); }
 .compare .legend { margin: 0; color: var(--muted); font-style: italic; }
 .compare .arrow { color: var(--cyan); text-align: center; }
-.compare .trait p { margin: 0 0 0.5rem; }
+.compare .trait p { margin: 0; }
 .compare .trait strong { color: var(--cyan); }
 .closing {
   margin: 1.8rem 0 0;

@@ -40,12 +40,12 @@ compare_heading = "A vardøger for your machine"
 compare_left = "The vardøger"
 compare_right = "The twin"
 compare = [
-  { legend = "Goes ahead of you", title = "Moves first.", text = "Every operation is planned and simulated in the twin before the machine makes it.", status = "prototype", label = "Working prototype" },
-  { legend = "Is heard before you arrive", title = "Shows what is coming.", text = "The operator sees the machine’s next move before it happens, and can approve, adjust or take over.", status = "next", label = "Next" },
-  { legend = "Never replaces the person", title = "Keeps the human in the loop.", text = "As more of the work becomes autonomous, the operator still sees what comes next and can step in.", status = "planned", label = "Planned" },
-  { legend = "A guardian angel", title = "Keeps watch.", text = "The twin compares what the machine does with what it should do, warns early of wear and faults, and adapts control and maintenance to the machine’s health.", status = "planned", label = "Planned" },
-  { legend = "A watchful mind", title = "Thinks ahead.", text = "An intelligent twin predicts, advises and acts, always one step ahead.", status = "planned", label = "Planned" },
-  { legend = "Arrives before the person", title = "Comes before the machine.", text = "In time, the twin will be designed together with the machine, before anything is built.", status = "planned", label = "Planned" },
+  { legend = "Goes ahead of you", title = "Moves first.", text = "Every operation is planned and simulated in the twin before the machine makes it." },
+  { legend = "Is heard before you arrive", title = "Shows what is coming.", text = "The operator sees the machine’s next move before it happens, and can approve, adjust or take over." },
+  { legend = "Never replaces the person", title = "Keeps the human in the loop.", text = "As more of the work becomes autonomous, the operator still sees what comes next and can step in." },
+  { legend = "A guardian angel", title = "Keeps watch.", text = "The twin compares what the machine does with what it should do, warns early of wear and faults, and adapts control and maintenance to the machine’s health." },
+  { legend = "A watchful mind", title = "Thinks ahead.", text = "An intelligent twin predicts, advises and acts, always one step ahead." },
+  { legend = "Arrives before the person", title = "Comes before the machine.", text = "In time, the twin will be designed together with the machine, before anything is built." },
 ]
 compare_closing = "The twin moves first. The machine follows."
 
