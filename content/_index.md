@@ -27,7 +27,7 @@ name_heading = "What is a vardøger?"
 name_paragraphs = [
   "In Norwegian folklore, the vardøger is a heralding spirit, a benevolent phantom double that goes ahead of you. People at home hear your footsteps on the stairs, the door creak or your cough, and more rarely they see you. Shortly afterwards you arrive. It is déjà vu in reverse. The experience comes first, and the person follows.",
   "The vardøger is also seen as a kind of guardian angel, sometimes identified with the protective spirit called *fylgje* (literally “follower”). Tales of it are told all over Norway, and some still believe in it today. The word comes from Old Norse *varðhygi*, possibly from *vǫrðr*, “guardian, watchman”, and *hugr*, “mind”. A watchful mind that walks ahead.",
-  "Vardøger does the same for a machine. Each operation is planned and simulated in its digital twin first, and the physical system follows. And just as the vardøger never replaces the person, but only goes ahead, the twin does not replace the operator. It shows what is coming, so the human stays in the loop even as more of the work becomes autonomous. Like a guardian spirit, the twin will also keep watch while the machine works. It compares what the machine does with what it should do, warns early of wear and faults, and adapts control and maintenance to the machine’s health. In time, the twin will come even earlier, designed together with the machine before anything is built.",
+  "Vardøger does the same for a machine. The twin comes first. It is developed before the machine exists, and the physical machine is built from it. Then the two work together. Each operation is planned and simulated in the twin first, and the machine follows. And just as the vardøger never replaces the person, but only goes ahead, the twin does not replace the operator. It shows what is coming, so the human stays in the loop even as more of the work becomes autonomous. Like a guardian spirit, the twin also keeps watch while the machine works. It compares what the machine does with what it should do, warns early of wear and faults, and adapts control and maintenance to the machine’s health.",
 ]
 name_links = [
   { label = "Watch the story", url = "https://www.youtube.com/watch?v=mVKilbitxMw" },
@@ -37,7 +37,7 @@ name_links = [
 
 # 8. Contact
 contact_heading = "Interested?"
-contact_text = "Vardøger is looking for pilot users and industrial partners. If you build or operate machines and want a twin that goes ahead of them, get in touch."
+contact_text = "Vardøger is looking for pilot users and industrial partners. If you build or operate machines and want a twin that goes ahead of them, get in touch. And if you have an idea for a new machine, we can help you develop its twin first, a virtual prototype to design, test and refine the concept before anything is built."
 email = "hello@vardoger.eu"
 email_subject = "Vard%C3%B8ger"
 github = "https://github.com/vardoger-eu"
