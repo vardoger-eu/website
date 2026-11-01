@@ -85,7 +85,7 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
    spans from the top of the wordmark down to the slogan. */
 .hero .hero-text {
   display: grid;
-  grid-template-columns: auto minmax(0, 38rem);
+  grid-template-columns: auto minmax(0, 44rem);
   grid-template-areas: ". badge" "logo titles" ". actions";
   justify-content: start;
   column-gap: clamp(1.25rem, 2vw, 1.75rem);
