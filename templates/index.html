@@ -32,61 +32,7 @@
 <main id="main" class="wrap">
   <section aria-labelledby="coming">
     <h2 id="coming">{{ t.coming_heading }}</h2>
-    {% for p in t.coming %}<p{% if loop.first %} class="lead"{% endif %}>{{ p }}</p>{% endfor %}
-  </section>
-
-  <section aria-labelledby="name">
-    <h2 id="name">{{ t.name_heading }}</h2>
-    {% for p in t.name_paragraphs %}<p>{{ p | markdown(inline=true) | safe }}</p>{% endfor %}
-    <ul class="links">
-      {% for l in t.name_links %}<li><a href="{{ l.url }}" rel="noopener">{{ l.label }}</a></li>{% endfor %}
-    </ul>
-  </section>
-
-  <section aria-labelledby="compare">
-    <h2 id="compare">{{ t.compare_heading }}</h2>
-    <div class="compare-head" aria-hidden="true">
-      <span>{{ t.compare_left }}</span><span></span><span>{{ t.compare_right }}</span>
-    </div>
-    <ol class="compare">
-      {% for c in t.compare %}
-      <li>
-        <p class="legend"><span class="visually-hidden">{{ t.compare_left }}: </span>{{ c.legend }}</p>
-        <span class="arrow" aria-hidden="true">→</span>
-        <div class="trait">
-          <p><strong>{{ c.title }}</strong> {{ c.text }}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ol>
-    <p class="closing">{{ t.compare_closing }}</p>
-  </section>
-
-  <section aria-labelledby="roadmap">
-    <h2 id="roadmap">{{ t.roadmap_heading }}</h2>
-    <p>{{ t.roadmap_intro }}</p>
-    <ol class="modes">
-      {% for m in t.modes %}
-      <li class="mode">
-        <span class="tag {{ m.status }}">{{ m.label }}</span>
-        <h3>{{ m.name }}</h3>
-        <p>{{ m.text }}</p>
-      </li>
-      {% endfor %}
-    </ol>
-  </section>
-
-  <section aria-labelledby="icon" class="icon-section">
-    <img src="{{ get_url(path='images/icon.svg') }}" alt="{{ t.icon_alt }}" width="220" height="220">
-    <div>
-      <h2 id="icon">{{ t.icon_heading }}</h2>
-      <p>{{ t.icon_text }}</p>
-    </div>
-  </section>
-
-  <section aria-labelledby="background">
-    <h2 id="background">{{ t.background_heading }}</h2>
-    <p>{{ t.citation | markdown(inline=true) | safe }} <a href="{{ t.doi }}" rel="noopener">{{ t.doi | replace(from="https://", to="") }}</a></p>
+    {% for p in t.coming %}<p{% if loop.first %} class="lead"{% endif %}>{{ p | markdown(inline=true) | safe }}</p>{% endfor %}
   </section>
 
   <section aria-labelledby="contact" class="contact">
