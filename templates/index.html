@@ -34,6 +34,14 @@
     {% for p in t.coming %}<p{% if loop.first %} class="lead"{% endif %}>{{ p | markdown(inline=true) | safe }}</p>{% endfor %}
   </section>
 
+  <section aria-labelledby="name">
+    <h2 id="name">{{ t.name_heading }}</h2>
+    {% for p in t.name_paragraphs %}<p>{{ p | markdown(inline=true) | safe }}</p>{% endfor %}
+    <ul class="links">
+      {% for l in t.name_links %}<li><a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a></li>{% endfor %}
+    </ul>
+  </section>
+
   <section aria-labelledby="contact" class="contact">
     <h2 id="contact">{{ t.contact_heading }}</h2>
     <p>{{ t.contact_text }}</p>

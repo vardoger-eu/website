@@ -17,9 +17,21 @@ more = "See what’s coming ↓"
 # 2. What it is: the whole concept, and that it is coming
 coming_heading = "What’s coming"
 coming = [
-  "Vardøger is a desktop application for building, simulating and operating intelligent digital twins of machines. It brings together multibody mechanics, hydraulics and electric drives, a 3D view of each machine’s CAD, and links to the outside world, from game controllers and ROS 2 to industrial fieldbuses. It is written in Rust and runs in real time.",
-  "The name comes from Norwegian folklore. A *vardøger* is a benevolent double that walks ahead of you, so people hear your footsteps before you arrive. In the same way, the twin goes ahead of its machine. Every operation is planned and simulated in the twin first. The operator sees what is coming and can approve it, adjust it or take over, and stays in the loop as more of the work becomes autonomous. While the machine works, the twin keeps watch and warns early of wear and faults. In time, the twin will be designed together with the machine, before anything is built.",
+  "Vardøger is the digital twin platform for intelligent mechatronics. It is a native desktop application, written in Rust, for building, simulating and operating intelligent digital twins of machines. It combines real-time multibody mechanics, hydraulics and electric drives, a 3D view with the machines’ CAD, and open links to the outside world, from game controllers and robotics middleware to industrial fieldbuses. An intelligent twin does more than mirror its machine. It predicts, advises and acts one step ahead, and shows the operator what is coming.",
   "Vardøger is in development, and a first version is on its way. Stay tuned.",
+]
+
+# The name: the user's story, with plainer punctuation.
+name_heading = "The name"
+name_paragraphs = [
+  "In Norwegian folklore, the vardøger is a heralding spirit, a benevolent phantom double that goes ahead of you. People at home hear your footsteps on the stairs, the door creak or your cough, and more rarely they see you. Shortly afterwards you arrive. It is déjà vu in reverse. The experience comes first, and the person follows.",
+  "The vardøger is also seen as a kind of guardian angel, sometimes identified with the protective spirit called *fylgje* (literally “follower”). Tales of it are told all over Norway, and some still believe in it today. The word comes from Old Norse *varðhygi*, possibly from *vǫrðr*, “guardian, watchman”, and *hugr*, “mind”. A watchful mind that walks ahead.",
+  "Vardøger does the same for a machine. Each operation is planned and simulated in its digital twin first, and the physical system follows. And just as the vardøger never replaces the person, but only goes ahead, the twin does not replace the operator. It shows what is coming, so the human stays in the loop even as more of the work becomes autonomous. Like a guardian spirit, the twin will also keep watch while the machine works. It compares what the machine does with what it should do, warns early of wear and faults, and adapts control and maintenance to the machine’s health. In time, the twin will come even earlier, designed together with the machine before anything is built.",
+]
+name_links = [
+  { label = "Watch the story", url = "https://www.youtube.com/watch?v=mVKilbitxMw" },
+  { label = "Store norske leksikon", url = "https://snl.no/vard%C3%B8ger" },
+  { label = "Wikipedia", url = "https://en.wikipedia.org/wiki/Vard%C3%B8ger" },
 ]
 
 # 8. Contact
