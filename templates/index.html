@@ -11,7 +11,6 @@
 <a class="skip" href="#main">{{ t.skip }}</a>
 
 <header class="hero">
-  <img class="banner" src="{{ get_url(path='images/scene.jpg') }}" alt="{{ t.banner_alt }}" width="3168" height="792">
   <div class="wrap hero-text">
     <img class="logo" src="{{ get_url(path='images/icon.svg') }}" alt="" width="96" height="96">
     <div>
@@ -40,8 +39,8 @@
     <p>{{ t.contact_text }}</p>
     <p class="actions">
       <a class="button big" href="{{ mailto | safe }}">{{ t.email }}</a>
-      <a href="{{ t.github }}" rel="noopener">{{ t.github | replace(from="https://", to="") }}</a>
-      <a href="{{ t.linkedin }}" rel="noopener">{{ t.linkedin_label }}</a>
+      <a href="{{ t.github }}" target="_blank" rel="noopener">{{ t.github | replace(from="https://", to="") }}</a>
+      <a href="{{ t.linkedin }}" target="_blank" rel="noopener">{{ t.linkedin_label }}</a>
     </p>
     {# TODO: a contact form could go here later; it needs a privacy-friendly
        EU form service and a privacy notice on this site. #}

@@ -11,7 +11,6 @@ badge = "In development"
 tagline = "The digital twin platform for intelligent mechatronics"
 line = "Build your machine’s benevolent phantom double for safer, smarter operations."
 slogan = "The twin moves first. The machine follows."
-banner_alt = "An offshore service vessel whose crane has a glowing cyan digital twin on the same pedestal, already placing a module on a floating wind turbine platform, with drones and an underwater drone and their twins, under the northern lights."
 cta = "Get in touch"
 more = "See what’s coming ↓"
 

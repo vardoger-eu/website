@@ -63,22 +63,32 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
 }
 .skip:focus { left: 0.5rem; }
 
-/* Hero */
-.banner {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: 26rem;
-  object-fit: cover;
-  object-position: 30% 50%;
+/* Hero: the offshore scene behind the text (the wide one on wide
+   screens, the portrait one on phones), darkened where the text sits and
+   faded into the page at the bottom. Decorative: the text says it all. */
+.hero {
+  display: flex;
+  align-items: center;
+  /* The whole scene, full width at the top in its own 3:1 shape (as in
+     the banner); if the text needs more height, the page's navy follows. */
+  min-height: 33.4vw;
+  background:
+    linear-gradient(180deg, rgba(11, 26, 46, 0) calc(33.4vw - 6rem), var(--bg) 33.4vw),
+    linear-gradient(90deg, rgba(11, 26, 46, 0.9) 0%, rgba(11, 26, 46, 0.7) 32%,
+      rgba(11, 26, 46, 0.15) 50%, rgba(11, 26, 46, 0) 58%),
+    url("../images/scene.jpg") center top / 100% auto no-repeat;
+  background-color: var(--bg);
 }
-.hero-text {
+/* The text over the calm sea on the left, clear of the scene. */
+.hero .hero-text {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  padding-top: 2.5rem;
-  padding-bottom: 1rem;
+  margin: 0;
+  max-width: none;
+  padding: 2rem 1.5rem 2rem max(1.5rem, 5vw);
 }
+.hero-text > div { max-width: 38rem; }
 .logo { flex: none; width: 6rem; height: 6rem; }
 .wordmark {
   margin: 0;
@@ -159,10 +169,35 @@ footer p { margin: 0.2rem 0; }
 
 html { scroll-behavior: smooth; }
 
+/* Narrower screens: the scene would sit under the text, so it becomes a
+   strip at the top (still whole) and the text follows below it. */
+@media (max-width: 80rem) {
+  .hero {
+    align-items: flex-start;
+    min-height: 0;
+    padding-top: 33.4vw;
+    background:
+      linear-gradient(180deg, rgba(11, 26, 46, 0) calc(33.4vw - 4rem), var(--bg) 33.4vw),
+      url("../images/scene.jpg") center top / 100% auto no-repeat;
+    background-color: var(--bg);
+  }
+  .hero .hero-text { padding-top: 1.5rem; }
+}
+
 @media (max-width: 40rem) {
-  .hero-text { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .hero-text { flex-direction: column; align-items: stretch; gap: 1rem; }
+  .hero-text > div { min-width: 0; }
+  .logo { align-self: flex-start; }
   .logo { width: 4.5rem; height: 4.5rem; }
-  .banner { max-height: 12rem; }
+  .hero {
+    align-items: flex-end;
+    min-height: 100svh;
+    padding-top: 0;
+    background:
+      linear-gradient(180deg, rgba(11, 26, 46, 0) 25%, rgba(11, 26, 46, 0.88) 55%, var(--bg) 100%),
+      url("../images/scene-portrait.jpg") 50% 0 / cover no-repeat;
+    background-color: var(--bg);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
