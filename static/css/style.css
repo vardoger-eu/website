@@ -182,6 +182,20 @@ footer p { margin: 0.2rem 0; }
 
 html { scroll-behavior: smooth; }
 
+/* Medium widths (laptops, tablets, narrow windows): the wide scene would
+   sit under the text, so the tall one (the phones') takes over, the crane
+   in its upper part and the text over the dark fade at the bottom. */
+@media (max-width: 75rem) {
+  .hero {
+    align-items: flex-end;
+    min-height: min(100svh, 64rem);
+    background:
+      linear-gradient(180deg, rgba(11, 26, 46, 0) 28%, rgba(11, 26, 46, 0.86) 58%, var(--bg) 100%),
+      url("../images/scene-portrait.jpg") center 38% / cover no-repeat;
+    background-color: var(--bg);
+  }
+}
+
 
 @media (max-width: 40rem) {
   .hero .hero-text {
