@@ -29,9 +29,9 @@ name_paragraphs = [
   "In Norwegian folklore, the vardøger is a heralding spirit, a benevolent phantom double that goes ahead of you. People at home hear your footsteps on the stairs, the door creak or your cough — more rarely they see you — and shortly afterwards you arrive. It is déjà vu in reverse: the experience comes first, the person follows.",
   "The vardøger is also seen as a kind of guardian angel, sometimes identified with the protective spirit called *fylgje* (literally “follower”). Tales of it are told all over Norway, and some still believe in it today. The word comes from Old Norse *varðhygi*, possibly from *vǫrðr*, “guardian, watchman”, and *hugr*, “mind”: a watchful mind that walks ahead.",
 ]
-# English Wikipedia only (the user's choice, 2026-11-01).
 name_links = [
   { label = "Watch the story", url = "https://www.youtube.com/watch?v=mVKilbitxMw" },
+  { label = "Store norske leksikon", url = "https://snl.no/vard%C3%B8ger" },
   { label = "Wikipedia", url = "https://en.wikipedia.org/wiki/Vard%C3%B8ger" },
 ]
 
