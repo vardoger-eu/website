@@ -12,19 +12,19 @@
 
 <header class="hero">
   <div class="wrap hero-text">
-    <img class="logo" src="{{ get_url(path='images/icon.svg') }}" alt="" width="96" height="96">
-    <div>
-      <p class="badge">{{ t.badge }}</p>
+    <p class="badge">{{ t.badge }}</p>
+    <img class="logo" src="{{ get_url(path='images/icon.svg') }}" alt="" width="208" height="208">
+    <div class="titles">
       <h1 class="wordmark">{{ t.wordmark }}</h1>
       <p class="tagline">{{ t.tagline }}</p>
       <p class="line">{{ t.line }}</p>
       <p class="slogan">{{ t.slogan }}</p>
-      <p class="actions">
-        <a class="button" href="{{ mailto | safe }}">{{ t.cta }}</a>
-        <a class="more" href="#coming">{{ t.more }}</a>
-      </p>
-      {# TODO: a download / release link once there is a public release. #}
     </div>
+    <p class="actions">
+      <a class="button" href="{{ mailto | safe }}">{{ t.cta }}</a>
+      <a class="more" href="#coming">{{ t.more }}</a>
+    </p>
+    {# TODO: a download / release link once there is a public release. #}
   </div>
 </header>
 
