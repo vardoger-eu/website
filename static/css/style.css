@@ -69,14 +69,15 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
 .hero {
   display: flex;
   align-items: center;
-  /* The whole scene, full width at the top in its own 3:1 shape (as in
-     the banner); if the text needs more height, the page's navy follows. */
-  min-height: 33.4vw;
+  /* The scene behind the text at every width: its own 3:1 shape on wide
+     screens; narrower, it keeps its height and is cut at the left (calm
+     sea), so the vessel and the turbine stay in view at the right. */
+  min-height: max(33.4vw, 34rem);
   background:
-    linear-gradient(180deg, rgba(11, 26, 46, 0) calc(33.4vw - 6rem), var(--bg) 33.4vw),
-    linear-gradient(90deg, rgba(11, 26, 46, 0.9) 0%, rgba(11, 26, 46, 0.7) 32%,
-      rgba(11, 26, 46, 0.15) 50%, rgba(11, 26, 46, 0) 58%),
-    url("../images/scene.jpg") center top / 100% auto no-repeat;
+    linear-gradient(180deg, rgba(11, 26, 46, 0) 80%, var(--bg) 100%),
+    linear-gradient(90deg, rgba(11, 26, 46, 0.92) 0%, rgba(11, 26, 46, 0.75) 30rem,
+      rgba(11, 26, 46, 0.2) 46rem, rgba(11, 26, 46, 0) 56rem),
+    url("../images/scene.jpg") right center / cover no-repeat;
   background-color: var(--bg);
 }
 /* The text over the calm sea on the left, clear of the scene. */
@@ -89,7 +90,8 @@ a:focus-visible, .skip:focus { outline: 3px solid var(--orange); outline-offset:
   padding: 2rem 1.5rem 2rem max(1.5rem, 5vw);
 }
 .hero-text > div { max-width: 38rem; }
-.logo { flex: none; width: 6rem; height: 6rem; }
+/* As tall as the wordmark and tagline together. */
+.logo { flex: none; width: clamp(6rem, 11vw, 10rem); height: auto; align-self: center; }
 .wordmark {
   margin: 0;
   font: 700 clamp(2.75rem, 7vw, 4.5rem)/1 "Space Grotesk", sans-serif;
@@ -169,20 +171,6 @@ footer p { margin: 0.2rem 0; }
 
 html { scroll-behavior: smooth; }
 
-/* Narrower screens: the scene would sit under the text, so it becomes a
-   strip at the top (still whole) and the text follows below it. */
-@media (max-width: 80rem) {
-  .hero {
-    align-items: flex-start;
-    min-height: 0;
-    padding-top: 33.4vw;
-    background:
-      linear-gradient(180deg, rgba(11, 26, 46, 0) calc(33.4vw - 4rem), var(--bg) 33.4vw),
-      url("../images/scene.jpg") center top / 100% auto no-repeat;
-    background-color: var(--bg);
-  }
-  .hero .hero-text { padding-top: 1.5rem; }
-}
 
 @media (max-width: 40rem) {
   .hero-text { flex-direction: column; align-items: stretch; gap: 1rem; }
